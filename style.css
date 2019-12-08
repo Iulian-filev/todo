@@ -1,0 +1,18 @@
+.lorem {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: rgb(31, 8, 138);
+    color: rgb(156, 77, 24);
+  }
+
+  h1 {
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+  }
+  .cont{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-auto-rows: 100px; 
+}
