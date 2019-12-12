@@ -38,11 +38,41 @@ let todoList = {
         todo.completed= !todo.completed;
         this.displayTodos();
 
+    },
+    toggleAll: function(){
+        let totalTodos=this.todos.length;
+        let completedTodos=0;
+
+        //Get number of completed todos
+        for (let i = 0; i < totalTodos; i++) {
+            if(this.todos[i].completed===true){
+                completedTodos++;
+            }
+        }
+    
+
+    if (completedTodos===totalTodos) {
+        for (let i = 0; i < totalTodos; i++) {
+            this.todos[i].completed = false;
+            
+            }
+        
+        }else{
+            for (let i = 0; i < totalTodos; i++) {
+                this.todos[i].completed = true;
+                
+                }
+
+        }
+
+
+    
+        this.displayTodos();
     }
-
-
 };
-addTodo('item 1');
-addTodo('item 2');
-addTodo('item 3');
-addTodo('item 4');
+
+let displayTodosButton= document.getElementById('displayTodosButton');
+
+displayTodosButton.addEventListener('click',function){
+    todoList.displayTodos();
+}
